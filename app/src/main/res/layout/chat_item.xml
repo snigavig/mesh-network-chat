@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_message_wrap_wrap"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/incomingMessageAvatarImageView"
+        android:layout_width="?attr/listPreferredItemHeightSmall"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:layout_margin="6dp"
+        android:background="@drawable/circle"
+        android:contentDescription="@string/content_description_avatar"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/chat_message_wrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp">
+
+
+        <TextView
+            android:id="@+id/listitem_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:textColor="@color/secondary_text_default_material_dark"
+            android:textSize="@dimen/abc_text_size_caption_material"
+            tools:ignore="PrivateResource" />
+
+        <TextView
+            android:id="@+id/listitem_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text_default_material_dark"
+            android:textSize="@dimen/abc_text_size_subhead_material"
+            tools:ignore="PrivateResource" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/outgoingMessageAvatarImageView"
+        android:layout_width="?attr/listPreferredItemHeightSmall"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:layout_margin="6dp"
+        android:background="@drawable/circle"
+        android:contentDescription="@string/content_description_avatar"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+</LinearLayout>

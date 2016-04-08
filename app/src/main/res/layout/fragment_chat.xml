@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context="com.example.chatroom.fragments.ChatFragment">
+
+    <!-- content goes here -->
+
+    <!-- stretching frame layout, using layout_weight -->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/chat_fragment_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_material_light"
+        tools:context="com.example.chatroom.fragments.ChatFragment"
+        tools:ignore="PrivateResource">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_scrollableview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <!-- content fixated to the bottom of the screen -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_behavior="com.example.chatroom.ui.ScrollingLinearLayoutBehaviour">
+        <!-- your bottom content -->
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <ImageButton
+            android:id="@+id/sendImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/send_button_content_description"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:src="@drawable/ic_send_24dp" />
+    </LinearLayout>
+</LinearLayout>

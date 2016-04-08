@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chat Room App</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="content_description_avatar">avatar</string>
+    <string name="content_description_edit_avatar">edit avatar</string>
+
+    <string name="package_name" translatable="false">com.example.chatroom</string>
+    <string name="service_id" translatable="false">com.example.chatroom.service</string>
+    <string name="avatar_label">Your avatar:</string>
+    <string name="nickname_label">Your nickname:</string>
+    <string name="send_button_content_description">send button</string>
+    <string name="message_header">%1$s @ %2$s</string>
+
+</resources>

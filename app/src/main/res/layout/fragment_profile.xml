@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_dark"
+    android:orientation="vertical"
+    tools:context="com.example.chatroom.fragments.ProfileFragment"
+    tools:ignore="PrivateResource">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/avatar_label"
+        android:textColor="@android:color/darker_gray" />
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:contentDescription="@string/content_description_avatar"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/editAvatarImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/content_description_edit_avatar"
+            android:padding="10dp"
+            android:src="@drawable/ic_edit_24dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="@string/nickname_label"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_edit_24dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_edit_24dp"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
